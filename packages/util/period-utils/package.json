@@ -1,0 +1,38 @@
+{
+    "name": "@navikt/fp-period-utils",
+    "author": "NAV",
+    "license": "MIT",
+    "version": "0.0.8",
+    "description": "A collection of period utils",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist",
+        "index.ts",
+        "package.json"
+    ],
+    "scripts": {
+        "build": "rollup -c rollup.config.js",
+        "clean": "rm -rf ./dist ./node_modules",
+        "test": "jest --passWithNoTests",
+        "test-watch": "jest --watch"
+    },
+    "dependencies": {
+        "@navikt/fp-array-utils": "^0.0.1",
+        "@navikt/fp-date-utils": "^0.0.5"
+    },
+    "devDependencies": {
+        "dayjs": "^1.10.4",
+        "jest": "^26.6.3"
+    },
+    "peerDependencies": {
+        "dayjs": "^1.10.4"
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/navikt/fp-frontend-modules"
+    }
+}
