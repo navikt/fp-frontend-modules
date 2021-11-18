@@ -1,18 +1,12 @@
 module.exports = {
-    stories: ['../stories/**/*.stories.mdx', '../stories/**/*.stories.@(js|jsx|ts|tsx)'],
+    core: {
+        builder: "webpack5",
+    },
     addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
     refs: {
         'react-components': {
             title: 'React',
             url: 'http://localhost:7001',
-        },
-        'web-components': {
-            title: 'Web Components',
-            url: 'http://localhost:7002',
-        },
-        'form-utils': {
-            title: 'Form utils',
-            url: 'http://localhost:7003',
         },
     },
     webpackFinal: async (config) => {
