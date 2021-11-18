@@ -1,6 +1,6 @@
 {
     "name": "@navikt/fp-date-utils",
-    "version": "0.0.5",
+    "version": "1.0.0",
     "description": "A collection of period utils",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
@@ -16,10 +16,10 @@
         "test-watch": "jest --watch"
     },
     "devDependencies": {
-        "dayjs": "^1.10.4"
+        "dayjs": "^1.10.6"
     },
     "peerDependencies": {
-        "dayjs": "^1.10.4"
+        "dayjs": "^1.10.6"
     },
     "publishConfig": {
         "registry": "https://npm.pkg.github.com"

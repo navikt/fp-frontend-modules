@@ -2,7 +2,7 @@
     "name": "@navikt/fp-period-utils",
     "author": "NAV",
     "license": "MIT",
-    "version": "0.0.8",
+    "version": "1.0.0",
     "description": "A collection of period utils",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
@@ -18,15 +18,15 @@
         "test-watch": "jest --watch"
     },
     "dependencies": {
-        "@navikt/fp-array-utils": "^0.0.1",
-        "@navikt/fp-date-utils": "^0.0.5"
+        "@navikt/fp-array-utils": "^1.0.0",
+        "@navikt/fp-date-utils": "^1.0.0"
     },
     "devDependencies": {
-        "dayjs": "^1.10.4",
-        "jest": "^26.6.3"
+        "dayjs": "^1.10.6",
+        "jest": "^27.3.1"
     },
     "peerDependencies": {
-        "dayjs": "^1.10.4"
+        "dayjs": "^1.10.6"
     },
     "publishConfig": {
         "registry": "https://npm.pkg.github.com"
