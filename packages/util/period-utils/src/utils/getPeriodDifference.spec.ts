@@ -1,5 +1,5 @@
-import periodDifference, { convertListOfDaysToPeriods, getPeriodsAsListOfDays } from '../getPeriodDifference';
-import Period from '../../types/Period';
+import periodDifference, { convertListOfDaysToPeriods, getPeriodsAsListOfDays } from './getPeriodDifference';
+import Period from '../types/Period';
 
 describe('getPeriodsAsListOfDays', () => {
     it('should return a list of date strings based on a provided list of periods', () => {

@@ -1,5 +1,5 @@
-import Period from '../../types/Period';
-import sortPeriodsByFomDate from '../sortPeriodsByFomDate';
+import Period from '../types/Period';
+import sortPeriodsByFomDate from './sortPeriodsByFomDate';
 
 describe('sortPeriodsByFomDate', () => {
     it('should sort periods by fom date', () => {

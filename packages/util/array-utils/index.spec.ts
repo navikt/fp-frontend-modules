@@ -1,4 +1,4 @@
-import { makeArrayWithoutDuplicates, getArrayDifference } from '../index';
+import { makeArrayWithoutDuplicates, getArrayDifference } from './index';
 test('Should make array without duplicates', () => {
     const arrayWithDuplicates = ['hei', 'test', 'hei', 'en test til'];
     const expectedResult = ['hei', 'test', 'en test til'];

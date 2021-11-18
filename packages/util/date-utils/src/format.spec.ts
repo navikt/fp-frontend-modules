@@ -1,4 +1,4 @@
-import { prettifyDateString } from '../format';
+import { prettifyDateString } from './format';
 
 describe('Format tests', () => {
     it('should prettify date', () => {

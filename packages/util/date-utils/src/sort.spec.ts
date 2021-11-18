@@ -1,6 +1,6 @@
-import { prettifyDateString } from '../format';
-import initializeDate from '../initialize';
-import dateSorter, { dateStringSorter } from '../sort';
+import { prettifyDateString } from './format';
+import initializeDate from './initialize';
+import dateSorter, { dateStringSorter } from './sort';
 
 describe('Sort tests', () => {
     it('should sort dates', () => {

@@ -1,4 +1,4 @@
-import bem from '../bemUtils';
+import bem from './bemUtils';
 
 const testCls = bem('block');
 
