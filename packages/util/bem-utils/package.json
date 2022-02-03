@@ -1,5 +1,5 @@
 {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "name": "@navikt/fp-bem-utils",
     "description": "A collection of bem utils",
     "author": "NAV",
@@ -18,9 +18,9 @@
         "test-watch": "jest --watch"
     },
     "devDependencies": {
-        "rollup": "^2.50.5",
+        "rollup": "^2.67.0",
         "rollup-plugin-peer-deps-external": "^2.2.4",
-        "rollup-plugin-styles": "^3.14.1",
+        "rollup-plugin-styles": "^4.0.0",
         "rollup-plugin-terser": "^7.0.2"
     },
     "bugs": {
