@@ -3,6 +3,7 @@ module.exports = {
     transform: {
         '^.+\\.(ts|js)x?$': 'ts-jest',
     },
+    testEnvironment: 'jsdom',
     collectCoverage: false,
     modulePathIgnorePatterns: ['<rootDir>/dist'],
 };
