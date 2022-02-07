@@ -2,7 +2,7 @@
     "name": "@navikt/fp-period-utils",
     "author": "NAV",
     "license": "MIT",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "A collection of period utils",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
@@ -12,22 +12,24 @@
         "package.json"
     ],
     "scripts": {
-        "build": "rollup -c rollup.config.js",
+        "build-webpack": "cross-env NODE_OPTIONS='--openssl-legacy-provider' webpack --config webpack.config.js",
+        "build-ts-declarations": "tsc index.ts --declaration --emitDeclarationOnly --jsx react --outDir dist --declarationMap --esModuleInterop --skipLibCheck",
+        "build": "yarn build-webpack & yarn build-ts-declarations",
         "clean": "rm -rf ./dist ./node_modules",
         "test": "jest --passWithNoTests",
         "test-watch": "jest --watch"
     },
     "dependencies": {
-        "@navikt/fp-array-utils": "^1.0.1",
-        "@navikt/fp-date-utils": "^1.0.1"
+        "@navikt/fp-array-utils": "^1.0.2",
+        "@navikt/fp-date-utils": "^1.0.2"
     },
     "devDependencies": {
+        "cross-env": "^7.0.3",
         "dayjs": "^1.10.6",
         "jest": "^27.4.7",
-        "rollup": "^2.67.0",
-        "rollup-plugin-peer-deps-external": "^2.2.4",
-        "rollup-plugin-styles": "^4.0.0",
-        "rollup-plugin-terser": "^7.0.2"
+        "typescript": "^4.5.5",
+        "webpack": "^5.68.0",
+        "webpack-cli": "^4.9.2"
     },
     "peerDependencies": {
         "dayjs": "^1.10.6"
