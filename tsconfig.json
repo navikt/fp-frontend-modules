@@ -3,9 +3,11 @@
         "declaration": true,
         "module": "esnext",
         "lib": ["es2019", "dom"],
+        "types": ["node", "jest", "@testing-library/jest-dom"],
         "target": "es2019",
         "moduleResolution": "node",
         "sourceMap": true,
+        "strictBindCallApply": true,
         "allowSyntheticDefaultImports": true,
         "skipLibCheck": true,
         "jsx": "react"

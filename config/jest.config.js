@@ -1,9 +1,9 @@
 module.exports = {
-    preset: 'ts-jest',
     transform: {
-        '^.+\\.(ts|js)x?$': 'ts-jest',
+        '^.+\\.(ts|tsx|js)?$': 'babel-jest',
     },
     testEnvironment: 'jsdom',
     collectCoverage: false,
+    moduleFileExtensions: ['js', 'json', 'ts', 'tsx', 'less', 'css'],
     modulePathIgnorePatterns: ['<rootDir>/dist'],
 };

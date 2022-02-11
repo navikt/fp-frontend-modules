@@ -1,6 +1,7 @@
 const commonJestConfig = require('./../../../config/jest.config');
-
 const path = require('path');
+
+module.exports = commonJestConfig;
 
 module.exports = {
   ...commonJestConfig,
@@ -16,5 +17,3 @@ module.exports = {
   },
   transformIgnorePatterns: ['<rootDir>.*(node_modules)(?!.*nav.*).*$'],
 };
-
-
