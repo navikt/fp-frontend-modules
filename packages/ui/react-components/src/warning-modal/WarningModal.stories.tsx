@@ -2,14 +2,14 @@ import React from 'react';
 import { Story } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
 import { action } from '@storybook/addon-actions';
 
-import AdvarselModal from './AdvarselModal';
+import WarningModal from './WarningModal';
 
 export default {
-  title: 'sharedComponents/AdvarselModal',
+  title: 'react-components/WarningModal',
 };
 
 export const Default: Story = () => (
-  <AdvarselModal
+  <WarningModal
     bodyText="Dette er en advarsel"
     showModal
     submit={action('button-click')}

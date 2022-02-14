@@ -10,7 +10,8 @@
         "build": "yarn build-webpack & yarn build-ts-declarations",
         "clean": "rm -rf ./dist ./node_modules",
         "test": "jest --passWithNoTests",
-        "test-watch": "jest --watch"
+        "test-watch": "jest --watch",
+        "ts-check": "tsc --pretty"
     },
     "devDependencies": {
         "cross-env": "^7.0.3",

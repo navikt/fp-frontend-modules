@@ -23,6 +23,8 @@ export { default as FlexContainer } from './src/flex-grid/FlexContainer';
 export { default as FlexRow } from './src/flex-grid/FlexRow';
 export { default as Image } from './src/image/Image';
 export { default as Tooltip } from './src/tooltip/Tooltip';
+export { default as WarningModal } from './src/warning-modal/WarningModal';
+export { default as EditedIcon } from './src/edited-icon/EditedIcon';
 
 /** Ikoner **/
 export { default as ArrowIcon } from './src/icons/ArrowIcon';

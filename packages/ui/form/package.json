@@ -7,7 +7,8 @@
         "build": "yarn build-webpack & yarn build-ts-declarations",
         "clean": "rm -rf ./dist ./node_modules",
         "storybook": "cross-env NODE_OPTIONS='--openssl-legacy-provider' start-storybook -p 7001 --ci",
-        "test": "jest --passWithNoTests"
+        "test": "jest --passWithNoTests",
+        "ts-check": "tsc --pretty"
     },
     "author": "NAV IT",
     "license": "SEE LICENSE IN LICENSE",

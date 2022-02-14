@@ -50,6 +50,7 @@
         "dev": "cross-env NODE_OPTIONS='--openssl-legacy-provider' start-storybook -p 6006",
         "pkg-dev": "cross-env NODE_OPTIONS='--openssl-legacy-provider' lerna run --parallel storybook",
         "test": "lerna run test",
+        "ts-check": "lerna run ts-check",
         "test-watch": "lerna run --parallel test-watch"
     },
     "repository": {

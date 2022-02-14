@@ -3,7 +3,7 @@ import React from 'react';
 import EditedIcon from './EditedIcon';
 
 export default {
-  title: 'React Components',
+  title: 'react-components/EditedIcon',
 };
 
 export const Default = () => (

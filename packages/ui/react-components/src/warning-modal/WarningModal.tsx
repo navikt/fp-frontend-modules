@@ -7,7 +7,7 @@ import { Normaltekst, Undertittel } from 'nav-frontend-typografi';
 import advarselImageUrl from '../assets/images/advarsel.svg';
 import Image from '../image/Image';
 
-import styles from './advarselModal.less';
+import styles from './warningModal.less';
 
 interface OwnProps {
   headerText?: string;
@@ -17,11 +17,11 @@ interface OwnProps {
 }
 
 /**
- * AdvarselModal
+ * WarningModal
  *
- * Presentasjonskomponent. Modal med advarselikon og som viser en valgfri tekst i tillegg til knappen OK.
+ * Modal med advarselikon og som viser en valgfri tekst i tillegg til knappen OK.
  */
-const AdvarselModal: FunctionComponent<OwnProps> = ({
+const WarningModal: FunctionComponent<OwnProps> = ({
   bodyText,
   headerText,
   showModal,
@@ -59,4 +59,4 @@ const AdvarselModal: FunctionComponent<OwnProps> = ({
   </Modal>
 );
 
-export default AdvarselModal;
+export default WarningModal;

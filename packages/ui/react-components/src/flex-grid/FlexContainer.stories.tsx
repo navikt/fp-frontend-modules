@@ -5,7 +5,7 @@ import FlexRow from './FlexRow';
 import FlexColumn from './FlexColumn';
 
 export default {
-  title: 'sharedComponents/FlexContainer',
+  title: 'react-components/FlexContainer',
 };
 
 export const Default = () => (

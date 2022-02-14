@@ -3,7 +3,7 @@ import React from 'react';
 import Tooltip from './Tooltip';
 
 export default {
-  title: 'React Components',
+  title: 'react-components/Tooltip',
 };
 
 export const visTooltipTilHøyre = () => (

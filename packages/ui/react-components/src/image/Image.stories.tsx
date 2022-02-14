@@ -3,11 +3,11 @@ import React, { useState } from 'react';
 import innvilgetImageUrl from '../assets/images/innvilget_valgt.svg';
 import questionNormalUrl from '../assets/images/question_normal.svg';
 import questionHoverUrl from '../assets/images/question_hover.svg';
-import AdvarselModal from '../advarsel-modal/AdvarselModal';
+import WarningModal from '../warning-modal/WarningModal';
 import Image from './Image';
 
 export default {
-  title: 'React Components',
+  title: 'react-components/Image',
 };
 
 export const Default = () => (
@@ -28,7 +28,7 @@ export const KlikkbartIkon = () => {
         onClick={() => setVisModal(true)}
       />
       {visModal && (
-        <AdvarselModal
+        <WarningModal
           bodyText="Dette er en advarsel"
           showModal
           submit={() => setVisModal(false)}

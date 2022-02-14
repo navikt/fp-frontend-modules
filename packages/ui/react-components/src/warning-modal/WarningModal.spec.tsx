@@ -3,11 +3,11 @@ import { render, screen } from '@testing-library/react';
 import { composeStories } from '@storybook/testing-react';
 import Modal from 'nav-frontend-modal';
 
-import * as stories from './AdvarselModal.stories';
+import * as stories from './WarningModal.stories';
 
 const { Default } = composeStories(stories);
 
-describe('<AdvarselModal>', () => {
+describe('<WarningModal>', () => {
   Modal.setAppElement('body');
   it('skal rendre modal', async () => {
     render(<Default />);
