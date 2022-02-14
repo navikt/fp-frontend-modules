@@ -13,7 +13,7 @@ const defaultIconProps = {
     fill: 'none',
 };
 
-const svgForType = (type): JSX.Element => {
+const svgForType = (type: string): JSX.Element => {
     switch (type) {
         case 'check':
             return (

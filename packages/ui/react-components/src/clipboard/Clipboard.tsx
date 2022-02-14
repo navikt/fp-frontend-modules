@@ -14,10 +14,10 @@ const clipboardCls = bemUtils('clipboard');
 const Clipboard = ({ children, buttonLabel = 'Kopier' }: ClipboardProps): JSX.Element => {
     const [didCopy, setDidCopy] = React.useState(false);
     const [shouldAnimate, setShouldAnimate] = React.useState(false);
-    const ref = React.useRef<HTMLDivElement>();
+    const ref = React.useRef<any>();
 
     const copy = (): void => {
-        if (!didCopy) {
+        if (!didCopy && ref.current) {
             setDidCopy(copyContentsToClipboard(ref.current.firstChild));
             setShouldAnimate(true);
         }
