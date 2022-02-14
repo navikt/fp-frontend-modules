@@ -3,7 +3,7 @@
     "version": "1.0.5",
     "scripts": {
         "build-webpack": "cross-env NODE_OPTIONS='--openssl-legacy-provider' webpack --config webpack.config.js",
-        "build-ts-declarations": "tsc index.ts --declaration --emitDeclarationOnly --jsx react --outDir dist --declarationMap --esModuleInterop --skipLibCheck",
+        "build-ts-declarations": "tsc index.ts ../../../externals.d.ts --declaration --emitDeclarationOnly --jsx react --outDir dist --declarationMap --esModuleInterop --skipLibCheck",
         "build": "yarn build-webpack & yarn build-ts-declarations",
         "clean": "rm -rf ./dist ./node_modules",
         "storybook": "cross-env NODE_OPTIONS='--openssl-legacy-provider' start-storybook -p 7001 --ci",

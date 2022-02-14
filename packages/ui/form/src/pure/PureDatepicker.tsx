@@ -13,7 +13,7 @@ interface PureDatepickerProps {
   label: LabelType;
   errorMessage?: string;
   ariaLabel?: string;
-  inputId?: string;
+  inputId: string;
   calendarSettings?: {
     position?: CalendarPlacement;
   };

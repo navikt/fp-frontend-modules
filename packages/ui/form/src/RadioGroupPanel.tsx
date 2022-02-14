@@ -17,8 +17,8 @@ interface RadioOption {
   name: string;
   field: ControllerRenderProps<FieldValues, string>;
   radio: RadioProps;
-  parse?: (value: string) => any;
-  onChange?: (value) => void;
+  parse: (value: string) => any;
+  onChange?: (value: string) => void;
   disabled: boolean;
   isReadOnly: boolean;
 }
@@ -64,7 +64,7 @@ interface RadioGroupPanelProps {
   label?: LabelType;
   radios: RadioProps[];
   validate?: ((value: string | number) => any)[];
-  onChange?: (value) => void;
+  onChange?: (value: string) => void;
   disabled?: boolean;
   isReadOnly?: boolean;
   isHorizontal?: boolean;

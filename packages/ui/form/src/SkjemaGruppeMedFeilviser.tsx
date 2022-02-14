@@ -24,7 +24,7 @@ const SkjemaGruppeMedFeilviser: FunctionComponent<NavFieldGroupProps> = ({
 }) => {
   const { formState: { errors } } = useFormContext();
   const { field } = useController({
-    name,
+    name: name || '',
     rules: validate ? {
       validate: useMemo(() => getValidationRules(validate), [validate]),
     } : undefined,

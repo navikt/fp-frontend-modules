@@ -12,7 +12,7 @@ import ReadOnlyField from './ReadOnlyField';
 dayjs.extend(customParseFormat);
 
 export interface DatepickerProps {
-  label?: LabelType;
+  label: LabelType;
   name: string;
   validate?: ((value: string | number) => any)[];
   ariaLabel?: string;

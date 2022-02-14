@@ -1,6 +1,6 @@
 const path = require('path');
-const CORE_DIR = path.resolve(__dirname, '../node_modules');
 const SRC_DIR = path.resolve(__dirname, '../src');
+const CORE_DIR = path.resolve(__dirname, '../node_modules');
 
 module.exports = {
     core: {
@@ -9,10 +9,6 @@ module.exports = {
     stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
     addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
     webpackFinal: async (config) => {
-        config.module.rules.forEach((rule, ruleIndex) => {
-            config.module.rules[ruleIndex].exclude = /node_modules/;
-        });
-
         config.module.rules = config.module.rules.concat({
             test: /\.(tsx?|ts?)$/,
             include: SRC_DIR,
@@ -30,6 +26,36 @@ module.exports = {
                 },
               }, {
                 loader: 'css-loader',
+                options: {
+                  importLoaders: 1,
+                  modules: {
+                    localIdentName: '[name]_[local]_[contenthash:base64:5]',
+                  },
+                },
+              }, {
+                loader: 'less-loader',
+                options: {
+                  lessOptions: {
+                    modules: true,
+                    localIdentName: '[name]_[local]_[contenthash:base64:5]',
+                    modifyVars: {
+                      nodeModulesPath: '~',
+                      coreModulePath: '~',
+                    },
+                  },
+                },
+              }],
+            include: [SRC_DIR],
+          }, {
+            test: /\.(less|css)?$/,
+            use: [
+              {
+                loader: 'style-loader',
+                options: {
+                  esModule: false,
+                },
+              }, {
+                loader: 'css-loader',
               }, {
                 loader: 'less-loader',
                 options: {
@@ -41,6 +67,7 @@ module.exports = {
                   },
                 },
               }],
+              include: [CORE_DIR],
           });
 
           config.resolve.extensions.push('.ts', '.tsx', '.less');
