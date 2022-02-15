@@ -41,8 +41,8 @@ const PersonCard = ({
     childAge,
 }: PersonCardData): JSX.Element => {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-    const menuRef = React.useRef(null);
-    const handleClickOutside = (event) => {
+    const menuRef = React.useRef<any>(null);
+    const handleClickOutside = (event: Event) => {
         if (menuRef.current && !menuRef.current.contains(event.target)) {
             setIsMenuOpen(false);
         }

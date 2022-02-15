@@ -36,7 +36,9 @@ export const Step = React.memo(
     }: StepProps & ComponentProps): JSX.Element => {
         const handleButtonClick = (event: React.FormEvent<HTMLButtonElement>): void => {
             event.preventDefault();
-            onClick(index);
+            if (onClick) {
+                onClick(index);
+            }
         };
 
         const stepIndicatorCls = classnames(stepCls.elementWithModifier('indicator', type), {

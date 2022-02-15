@@ -1,11 +1,10 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const SRC_DIR = path.resolve(__dirname, './src');
+const COMMON_WEBPACK_CONFIG = require('../../../config/webpack.config.js');
+const { merge } = require('webpack-merge');
+const peerDeps = require('./package.json').peerDependencies;
 
-module.exports = {
-  mode: 'production',
-  devtool: 'source-map',
-  entry: './index.ts',
+const config = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
@@ -14,31 +13,12 @@ module.exports = {
       type: 'umd',
     },
   },
-  module: {
-    rules: [{
-      test: /\.ts$/,
-      include: SRC_DIR,
-      loader: 'babel-loader',
-      options: {
-        rootMode: "upward",
-      },
-    }],
-  },
 
-  externals:  [{
-    'cross-env': 'cross-env',
-    typescript: 'typescript',
-    webpack: 'webpack',
-    'webpack-cli': 'webpack-cli',
-  }],
-
-  resolve: {
-    extensions: ['.js', '.ts'],
-  },
+  externals: Object.keys(peerDeps).map((d) => ({
+    [d]: d,
+  })),
 
   plugins: [new CleanWebpackPlugin()],
-
-  optimization: {
-    moduleIds: 'named',
-  },
 }
+
+module.exports = merge(COMMON_WEBPACK_CONFIG, config);

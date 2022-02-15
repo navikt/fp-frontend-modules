@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
-const AvslåttIcon = ({ className }) => (
+interface Props {
+    className: string;
+}
+
+const AvslåttIcon: FunctionComponent<Props> = ({ className }) => (
     <svg width="28px" height="28px" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" className={className}>
         <title>Oppgave løst/avslått</title>
         <defs></defs>

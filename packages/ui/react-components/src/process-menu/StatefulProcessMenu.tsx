@@ -16,7 +16,9 @@ export const StatefulProcessMenu = ({ steps, onClick }: StatefulProcessMenuProps
     const [activeIndex, setActiveIndex] = React.useState(0);
     const handleOnClick = (index: number): void => {
         setActiveIndex(index);
-        onClick(index);
+        if (onClick) {
+            onClick(index);
+        }
     };
 
     const buildSteps = (): StepProps[] => {

@@ -2,7 +2,7 @@ import Period from '../types/Period';
 import sortPeriodsByFomDate from './sortPeriodsByFomDate';
 import { initializeDate } from '@navikt/fp-date-utils';
 
-const checkIfPeriodsAreEdgeToEdge = (period, otherPeriod) => {
+const checkIfPeriodsAreEdgeToEdge = (period: Period, otherPeriod: Period) => {
     const dayAfterPeriod = initializeDate(period.tom).add(1, 'day');
     const startOfNextPeriod = initializeDate(otherPeriod.fom);
     return dayAfterPeriod.isSame(startOfNextPeriod);

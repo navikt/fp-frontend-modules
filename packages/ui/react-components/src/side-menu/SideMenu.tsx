@@ -24,9 +24,9 @@ interface SideMenuProps {
 }
 
 const SideMenu = ({ links, heading, onClick, theme }: SideMenuProps): JSX.Element => {
-    const sideMenuRootClassnames = classnames(sideMenuCls.block, {
+    const sideMenuRootClassnames = classnames(sideMenuCls.block, theme ? {
         [sideMenuCls.modifier(theme)]: theme,
-    });
+    } : {});
     return (
         <div className={sideMenuRootClassnames}>
             <nav className={sideMenuCls.element('container')}>

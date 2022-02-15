@@ -1,5 +1,5 @@
 {
-    "version": "1.0.2",
+    "version": "1.0.3",
     "name": "@navikt/fp-bem-utils",
     "description": "A collection of bem utils",
     "author": "NAV",
@@ -17,9 +17,16 @@
         "build": "yarn build-webpack & yarn build-ts-declarations",
         "clean": "rm -rf ./dist ./node_modules",
         "test": "jest --passWithNoTests",
-        "test-watch": "jest --watch"
+        "test-watch": "jest --watch",
+        "ts-check": "tsc --pretty"
     },
     "devDependencies": {
+        "cross-env": "^7.0.3",
+        "typescript": "^4.5.5",
+        "webpack": "^5.68.0",
+        "webpack-cli": "^4.9.2"
+    },
+    "peerDependencies": {
         "cross-env": "^7.0.3",
         "typescript": "^4.5.5",
         "webpack": "^5.68.0",

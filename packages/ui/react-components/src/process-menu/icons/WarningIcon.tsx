@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
-const WarningIcon = ({ className }) => (
+interface Props {
+    className: string;
+}
+
+const WarningIcon: FunctionComponent<Props> = ({ className }) => (
     <svg width="20px" height="20px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" className={className}>
         <title>Behandlet - Manuell oppgave</title>
         <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">

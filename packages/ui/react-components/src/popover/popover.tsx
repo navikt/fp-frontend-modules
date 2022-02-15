@@ -29,8 +29,8 @@ export const Popover: React.FunctionComponent<PopoverProps> = ({
 }) => {
     const { placement, strategy } = popperProps;
     const [referenceElement, setReferenceElement] = React.useState(null);
-    const [popperElement, setPopperElement] = React.useState(null);
-    const [arrowElement, setArrowElement] = React.useState(null);
+    const [popperElement, setPopperElement] = React.useState<any>(null);
+    const [arrowElement, setArrowElement] = React.useState<any>(null);
     const { styles, attributes, update } = usePopper(referenceElement, popperElement, {
         placement,
         strategy,
@@ -70,7 +70,7 @@ export const Popover: React.FunctionComponent<PopoverProps> = ({
                         data-popper-arrow
                     />
                 )}
-                {popperProps.children(popperChildrenProps)}
+                {popperChildrenProps && popperProps.children(popperChildrenProps)}
             </div>
         </React.StrictMode>
     );

@@ -1,4 +1,4 @@
-const copyContentsToClipboard = (node): boolean => {
+const copyContentsToClipboard = (node: any | null): boolean => {
     let didCopy = false;
     /* eslint-disable no-param-reassign */
     if (node) {

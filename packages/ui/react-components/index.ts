@@ -18,6 +18,13 @@ export { default as PersonCard, Gender } from './src/person-card/PersonCard';
 export { default as EmptyPersonCard } from './src/person-card/EmptyPersonCard';
 export { default as SystemButton } from './src/system-button/SystemButton';
 export { default as UserPanel } from './src/user-panel/UserPanel';
+export { default as FlexColumn } from './src/flex-grid/FlexColumn';
+export { default as FlexContainer } from './src/flex-grid/FlexContainer';
+export { default as FlexRow } from './src/flex-grid/FlexRow';
+export { default as Image } from './src/image/Image';
+export { default as Tooltip } from './src/tooltip/Tooltip';
+export { default as WarningModal } from './src/warning-modal/WarningModal';
+export { default as EditedIcon } from './src/edited-icon/EditedIcon';
 
 /** Ikoner **/
 export { default as ArrowIcon } from './src/icons/ArrowIcon';

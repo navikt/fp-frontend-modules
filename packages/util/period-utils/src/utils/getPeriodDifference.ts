@@ -22,7 +22,7 @@ export function convertListOfDaysToPeriods(days: string[]): Period[] {
     }
 
     const daySplit = [];
-    let currentSplit = [];
+    let currentSplit: string[] = [];
     for (let i = 0; i < days.length; i++) {
         const currentSplitCount = currentSplit.length;
         if (currentSplitCount === 0) {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import bemUtils from '@navikt/fp-bem-utils';
 import { Normaltekst } from 'nav-frontend-typografi';
 import Card from './Card';
@@ -10,7 +10,7 @@ interface EmptyPersonCard {
     namePlaceholder: string;
 }
 
-const EmptyPersonCard = ({ namePlaceholder }) => (
+const EmptyPersonCard: FunctionComponent<EmptyPersonCard> = ({ namePlaceholder }) => (
     <Card>
         <div className={personCardCls.element('container')}>
             <GenderIcon />

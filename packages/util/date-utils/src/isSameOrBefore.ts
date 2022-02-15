@@ -1,6 +1,6 @@
 import dayjs from 'dayjs';
 
-function isSameOrBefore(date, otherDate) {
+function isSameOrBefore(date: string | dayjs.Dayjs, otherDate: string | dayjs.Dayjs) {
     const dateFormats = ['YYYY-MM-DD', 'DD.MM.YYYY'];
     const dateInQuestion = dayjs(date, dateFormats).utc(true);
     const formattedOtherDate = dayjs(otherDate, dateFormats).utc(true);
