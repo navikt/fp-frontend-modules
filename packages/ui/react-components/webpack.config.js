@@ -7,6 +7,7 @@ const peerDeps = require('./package.json').peerDependencies;
 const config = {
   output: {
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '',
     filename: 'index.js',
     library: {
       name: '@navikt/fp-react-components',
