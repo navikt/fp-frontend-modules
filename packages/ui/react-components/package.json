@@ -1,6 +1,6 @@
 {
     "name": "@navikt/fp-react-components",
-    "version": "1.0.5",
+    "version": "1.0.7",
     "scripts": {
         "build-webpack": "cross-env NODE_OPTIONS='--openssl-legacy-provider' webpack --config webpack.config.js",
         "build-ts-declarations": "tsc index.ts ../../../externals.d.ts --declaration --emitDeclarationOnly --jsx react --outDir dist --declarationMap --esModuleInterop --skipLibCheck",
@@ -125,8 +125,8 @@
         }
     },
     "dependencies": {
-        "@navikt/fp-bem-utils": "^1.0.2",
-        "@navikt/fp-period-utils": "^1.0.2"
+        "@navikt/fp-bem-utils": "^1.0.3",
+        "@navikt/fp-period-utils": "^1.0.3"
     },
     "publishConfig": {
         "registry": "https://npm.pkg.github.com"

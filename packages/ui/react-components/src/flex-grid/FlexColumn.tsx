@@ -1,9 +1,10 @@
 import React, { ReactNode, FunctionComponent } from 'react';
-import classnames from 'classnames/bind';
+import classnames from 'classnames';
+import bem from '@navikt/fp-bem-utils';
 
-import styles from './flexColumn.less';
+import './flexColumn.less';
 
-const classNames = classnames.bind(styles);
+const flexColumnNewCls = bem('flexColumnNew');
 
 interface OwnProps {
   children?: ReactNode | ReactNode[];
@@ -14,7 +15,7 @@ const FlexColumn: FunctionComponent<OwnProps> = ({
   children,
   className,
 }) => (
-  <div className={classNames('flexColumnNew', className)}>
+  <div className={classnames(flexColumnNewCls.block, className)}>
     {children}
   </div>
 );

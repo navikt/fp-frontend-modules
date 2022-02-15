@@ -1,9 +1,10 @@
+import bem from '@navikt/fp-bem-utils';
 import React, { ReactNode, FunctionComponent } from 'react';
-import classnames from 'classnames/bind';
+import classnames from 'classnames';
 
-import styles from './flexContainer.less';
+import './flexContainer.less';
 
-const classNames = classnames.bind(styles);
+const flexContainerCls = bem('flexContainer');
 
 interface OwnProps {
   children?: ReactNode | ReactNode[];
@@ -16,7 +17,7 @@ const FlexContainer: FunctionComponent<OwnProps> = ({
   wrap = false,
   fullHeight = false,
 }) => (
-  <div className={classNames('flexContainer', 'fluid', { flexWrap: wrap, fullHeight })}>
+  <div className={classnames(flexContainerCls.element('fluid'), { flexWrap: wrap, fullHeight })}>
     {children}
   </div>
 );

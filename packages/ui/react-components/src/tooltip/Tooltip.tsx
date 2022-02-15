@@ -1,9 +1,8 @@
 import React, { FunctionComponent, ReactNode } from 'react';
-import classnames from 'classnames/bind';
+import classnames from 'classnames';
+import bem from '@navikt/fp-bem-utils';
 
-import styles from './tooltip.less';
-
-const classNames = classnames.bind(styles);
+import './tooltip.less';
 
 interface OwnProps {
   children: ReactNode | string;
@@ -25,8 +24,8 @@ const Tooltip: FunctionComponent<OwnProps> = ({
   alignTop = false,
   alignBottom = false,
 }) => (
-  <div className={styles.tooltip}>
-    <span className={classNames(styles.tooltiptext, {
+  <div className={bem('tooltip').block}>
+    <span className={classnames(bem('tooltiptext').block, {
       right: alignRight || (!alignLeft && !alignTop && !alignBottom),
       left: alignLeft,
       top: alignTop,

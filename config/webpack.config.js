@@ -14,9 +14,6 @@ module.exports = {
       use: [
         {
           loader: 'style-loader',
-          options: {
-            esModule: true,
-          },
         }, {
           loader: 'css-loader',
         }, {

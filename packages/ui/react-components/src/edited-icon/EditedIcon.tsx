@@ -1,12 +1,13 @@
 import React, { FunctionComponent } from 'react';
-import classnames from 'classnames/bind';
+import classnames from 'classnames';
+import bem from '@navikt/fp-bem-utils';
 
 import endretFelt from '../assets/images/endret_felt.svg';
 import Image from '../image/Image';
 
-import styles from './editedIcon.less';
+import './editedIcon.less';
 
-const classNames = classnames.bind(styles);
+const editedIcon = bem('editedIcon');
 
 interface OwnProps {
   className?: string;
@@ -21,7 +22,7 @@ interface OwnProps {
 const EditedIcon: FunctionComponent<OwnProps> = ({
   className = '',
 }) => (
-  <span className={classNames('editedIcon', className)}>
+  <span className={classnames(editedIcon.block, className)}>
     <Image
       src={endretFelt}
       alt="Saksbehandler har endret feltets verdi"

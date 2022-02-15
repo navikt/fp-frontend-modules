@@ -1,6 +1,5 @@
 const path = require('path');
 const SRC_DIR = path.resolve(__dirname, '../src');
-const CORE_DIR = path.resolve(__dirname, '../node_modules');
 
 module.exports = {
     core: {
@@ -21,39 +20,6 @@ module.exports = {
             use: [
               {
                 loader: 'style-loader',
-                options: {
-                  esModule: true,
-                },
-              }, {
-                loader: 'css-loader',
-                options: {
-                  importLoaders: 1,
-                  modules: {
-                    localIdentName: '[name]_[local]_[contenthash:base64:5]',
-                  },
-                },
-              }, {
-                loader: 'less-loader',
-                options: {
-                  lessOptions: {
-                    modules: true,
-                    localIdentName: '[name]_[local]_[contenthash:base64:5]',
-                    modifyVars: {
-                      nodeModulesPath: '~',
-                      coreModulePath: '~',
-                    },
-                  },
-                },
-              }],
-            include: [SRC_DIR],
-          }, {
-            test: /\.(less|css)?$/,
-            use: [
-              {
-                loader: 'style-loader',
-                options: {
-                  esModule: false,
-                },
               }, {
                 loader: 'css-loader',
               }, {
@@ -67,7 +33,6 @@ module.exports = {
                   },
                 },
               }],
-              include: [CORE_DIR],
           });
 
           config.resolve.extensions.push('.ts', '.tsx', '.less');

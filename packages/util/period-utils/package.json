@@ -2,7 +2,7 @@
     "name": "@navikt/fp-period-utils",
     "author": "NAV",
     "license": "MIT",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "A collection of period utils",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
@@ -21,8 +21,8 @@
         "ts-check": "tsc --pretty"
     },
     "dependencies": {
-        "@navikt/fp-array-utils": "^1.0.2",
-        "@navikt/fp-date-utils": "^1.0.2"
+        "@navikt/fp-array-utils": "^1.0.3",
+        "@navikt/fp-date-utils": "^1.0.3"
     },
     "devDependencies": {
         "cross-env": "^7.0.3",

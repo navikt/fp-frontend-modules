@@ -3,11 +3,12 @@ import { Column, Row } from 'nav-frontend-grid';
 import Modal from 'nav-frontend-modal';
 import { Hovedknapp } from 'nav-frontend-knapper';
 import { Normaltekst, Undertittel } from 'nav-frontend-typografi';
+import bem from '@navikt/fp-bem-utils';
 
 import advarselImageUrl from '../assets/images/advarsel.svg';
 import Image from '../image/Image';
 
-import styles from './warningModal.less';
+import './warningModal.less';
 
 interface OwnProps {
   headerText?: string;
@@ -28,7 +29,7 @@ const WarningModal: FunctionComponent<OwnProps> = ({
   submit,
 }) => (
   <Modal
-    className={styles.modal}
+    className={bem('modal').block}
     isOpen={showModal}
     closeButton={false}
     contentLabel={bodyText}
@@ -37,16 +38,16 @@ const WarningModal: FunctionComponent<OwnProps> = ({
   >
     <Row>
       <Column xs="1">
-        <Image className={styles.image} alt={bodyText} src={advarselImageUrl} />
-        <div className={styles.divider} />
+        <Image className={bem('image').block} alt={bodyText} src={advarselImageUrl} />
+        <div className={bem('divider').block} />
       </Column>
-      <Column xs="8" className={styles.text}>
+      <Column xs="8" className={bem('text').block}>
         {headerText && <Undertittel>{headerText}</Undertittel>}
         <Normaltekst>{bodyText}</Normaltekst>
       </Column>
       <Column xs="2">
         <Hovedknapp
-          className={styles.submitButton}
+          className={bem('submitButton').block}
           mini
           htmlType="submit"
           onClick={submit}

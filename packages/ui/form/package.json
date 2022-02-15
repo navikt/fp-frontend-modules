@@ -1,6 +1,6 @@
 {
     "name": "@navikt/fp-form",
-    "version": "1.0.0",
+    "version": "1.0.0-beta.0",
     "scripts": {
         "build-webpack": "cross-env NODE_OPTIONS='--openssl-legacy-provider' webpack --config webpack.config.js",
         "build-ts-declarations": "tsc index.ts ../../../externals.d.ts --declaration --emitDeclarationOnly --jsx react --outDir dist --declarationMap --esModuleInterop --skipLibCheck",

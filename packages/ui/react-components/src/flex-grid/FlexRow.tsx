@@ -1,9 +1,10 @@
 import React, { ReactNode, FunctionComponent } from 'react';
-import classnames from 'classnames/bind';
+import classnames from 'classnames';
+import bem from '@navikt/fp-bem-utils';
 
-import styles from './flexRow.less';
+import './flexRow.less';
 
-const classNames = classnames.bind(styles);
+const flexRowCls = bem('flexRow');
 
 interface OwnProps {
   children: ReactNode | ReactNode[];
@@ -25,7 +26,7 @@ const FlexRow: FunctionComponent<OwnProps> = ({
   wrap = false,
   className,
 }) => (
-  <div className={classNames('flexRow', { spaceBetween }, { alignItemsToBaseline }, { alignItemsToFlexEnd }, { wrap }, className)}>
+  <div className={classnames(flexRowCls.block, { spaceBetween }, { alignItemsToBaseline }, { alignItemsToFlexEnd }, { wrap }, className)}>
     {children}
   </div>
 );
