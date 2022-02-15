@@ -1,12 +1,15 @@
 import React, { FunctionComponent } from 'react';
 import { Normaltekst } from 'nav-frontend-typografi';
-
+import bemUtils from '@navikt/fp-bem-utils';
 import { EditedIcon } from '@navikt/fp-react-components';
+
 import Label, { LabelType } from './Label';
 
-import styles from './readOnlyField.less';
+import './readOnlyField.less';
 
 const hasValue = (value: any): boolean => value !== undefined && value !== null && value !== '';
+
+const readOnlyContainerCls = bemUtils('readOnlyContainer');
 
 interface OwnProps {
   label?: LabelType;
@@ -23,9 +26,9 @@ export const ReadOnlyField: FunctionComponent<OwnProps> = ({
     return null;
   }
   return (
-    <div className={styles.readOnlyContainer}>
+    <div className={readOnlyContainerCls.block}>
       <Label input={label} readOnly />
-      <Normaltekst className={styles.readOnlyContent}>
+      <Normaltekst className={readOnlyContainerCls.modifier('readOnlyContent')}>
         {value}
         {isEdited && <EditedIcon />}
       </Normaltekst>

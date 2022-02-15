@@ -1,12 +1,13 @@
 import React, {
   ReactElement, ElementType, FunctionComponent,
 } from 'react';
-import classnames from 'classnames/bind';
+import classnames from 'classnames';
+import bemUtils from '@navikt/fp-bem-utils';
 import { Undertekst } from 'nav-frontend-typografi';
 
-import styles from './label.less';
+import './label.less';
 
-const classNames = classnames.bind(styles);
+const labelWrapperCls = bemUtils('labelWrapper');
 
 export type LabelType = string | ReactElement;
 
@@ -26,8 +27,8 @@ const Label: FunctionComponent<OwnProps> = ({
   }
 
   return (
-    <span className={classNames('labelWrapper', { readOnly })}>
-      <TypoElem tag="span" className={styles.label}>{input}</TypoElem>
+    <span className={classnames(labelWrapperCls.block, { readOnly })}>
+      <TypoElem tag="span" className={labelWrapperCls.modifier('label')}>{input}</TypoElem>
     </span>
   );
 };

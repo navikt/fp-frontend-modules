@@ -1,14 +1,15 @@
 import React, { useMemo, FunctionComponent, ReactNode } from 'react';
 import { useController, useFormContext } from 'react-hook-form';
-import classnames from 'classnames/bind';
+import classnames from 'classnames';
+import bemUtils from '@navikt/fp-bem-utils';
 
 import CustomNavSelect from './CustomNavSelect';
 import ReadOnlyField from './ReadOnlyField';
 import { getError, getValidationRules } from './formUtils';
 
-import styles from './select.less';
+import './select.less';
 
-const classNames = classnames.bind(styles);
+const navSelectCls = bemUtils('navSelect');
 
 interface OwnProps {
   name: string;
@@ -56,7 +57,7 @@ const Select: FunctionComponent<OwnProps> = ({
       selectValues={selectValues}
       placeholder={placeholder}
       hideValueOnDisable={hideValueOnDisable}
-      className={classNames('navSelect', { navSelectReadOnly: readOnly })}
+      className={classnames(navSelectCls.block, { navSelectReadOnly: readOnly })}
       label={label}
       feil={getError(errors, name)}
       bredde={bredde}

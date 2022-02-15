@@ -2,12 +2,15 @@ import React, { FunctionComponent, useMemo } from 'react';
 import { useController, useFormContext } from 'react-hook-form';
 import { Textarea as NavTextarea } from 'nav-frontend-skjema';
 import EtikettFokus from 'nav-frontend-etiketter';
+import bemUtils from '@navikt/fp-bem-utils';
 
 import Label, { LabelType } from './Label';
 import ReadOnlyField from './ReadOnlyField';
 import { getError, getValidationRules } from './formUtils';
 
-import styles from './textArea.less';
+import './textArea.less';
+
+const textAreaFieldWithBadgesCls = bemUtils('textAreaFieldWithBadges');
 
 type BadgesType = 'suksess' | 'info' | 'advarsel' | 'fokus';
 
@@ -49,9 +52,9 @@ const TextArea: FunctionComponent<OwnProps> = ({
   }
 
   return (
-    <div className={badges ? styles.textAreaFieldWithBadges : null}>
+    <div className={badges ? textAreaFieldWithBadgesCls.block : undefined}>
       { badges && (
-        <div className={styles.etikettWrapper}>
+        <div className={textAreaFieldWithBadgesCls.modifier('etikettWrapper')}>
           { badges.map(({ text, type, titleText }) => (
             <EtikettFokus key={text} type={type} title={titleText}>
               {text}
