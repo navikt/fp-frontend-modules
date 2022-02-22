@@ -31,7 +31,7 @@ const BoxedListWithSelection: React.FunctionComponent<BoxedListWithSelectionProp
                     className={boxedListWithSelectionItemCls.element('button')}
                     aria-current={selected}
                     type="button"
-                    onClick={(e) => onClick && onClick(index, e)}
+                    onClick={(e) => onClick ? onClick(index, e) : undefined}
                 >
                     <Normaltekst tag="span">{name}</Normaltekst>
                 </button>

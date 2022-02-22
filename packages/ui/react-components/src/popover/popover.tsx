@@ -70,7 +70,10 @@ export const Popover: React.FunctionComponent<PopoverProps> = ({
                         data-popper-arrow
                     />
                 )}
-                {popperChildrenProps && popperProps.children(popperChildrenProps)}
+                {
+                //@ts-ignore
+                popperProps.children(popperChildrenProps)
+                }
             </div>
         </React.StrictMode>
     );
